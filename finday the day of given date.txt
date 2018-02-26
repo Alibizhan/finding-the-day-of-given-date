@@ -1,0 +1,42 @@
+program dateandtime
+    implicit none
+    integer :: day, d, m, y
+  integer, dimension(12) :: t
+  integer :: x
+  integer :: l
+  write(*,*) 'Enter day, month and year respectively '
+  read(*,*) d,m,y
+  
+    !Tomohiko Sakamoto algorithm
+    t = (/ 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 /)
+    l = m<3
+    y = y-l
+    x=( y + y/4 - y/100 + y/400 + t(m) + d)
+    day = mod(x ,7)
+    
+    print*,'....'
+    
+    if(day==1)then
+        print*,'Monday'
+        
+    else if(day==2) then
+        print*,'Tuesday'
+        
+        else if(day==3) then
+        print*,'Wednesday'
+        
+        else if(day==4) then
+        print*,'Thursday'
+        
+        else if(day==5) then
+        print*,'Friday'
+        
+        else if(day==6) then
+        print*,'Saturday'
+        
+        else
+        print*,'Sunday'
+    endif
+    
+    !print*, x
+end program dateandtime
