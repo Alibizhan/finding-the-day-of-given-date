@@ -1,1 +1,1 @@
-# finding the day of given date
+# Find day of the week for a given date, works on Netbeans.
