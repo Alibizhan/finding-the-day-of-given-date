@@ -1,1 +1,1 @@
-# Find day of the week for a given date, works on Netbeans.
+# Fortran prgram for finding day of the week for a given date.
